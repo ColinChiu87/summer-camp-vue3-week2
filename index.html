@@ -33,16 +33,16 @@
             </div>
             <div class="col-md-12 mt-3">
               <div class="btn-group w-100">
-                <button type="button" class="btn btn-outline-primary w-25" @click.prevent="plus">
+                <button type="button" class="btn btn-outline-primary w-25" @click.prevent="mark = '+'">
                   +
                 </button>
-                <button type="button" class="btn btn-outline-primary w-25" @click.prevent="minus">
+                <button type="button" class="btn btn-outline-primary w-25" @click.prevent="mark = '-'">
                   -
                 </button>
-                <button type="button" class="btn btn-outline-primary w-25" @click.prevent="multiply">
+                <button type="button" class="btn btn-outline-primary w-25" @click.prevent="mark = '*'">
                   *
                 </button>
-                <button type="button" class="btn btn-outline-primary w-25" @click.prevent="divided">
+                <button type="button" class="btn btn-outline-primary w-25" @click.prevent="mark = '/'">
                   /
                 </button>
               </div>
@@ -77,18 +77,6 @@
         }
       },
       methods: {
-        plus() {
-          this.mark = '+';
-        },
-        minus() {
-          this.mark = '-';
-        },
-        multiply() {
-          this.mark = '*';
-        },
-        divided() {
-          this.mark = '/'
-        },
         calc() {
           if (this.mark == '+') {
             this.result = this.num1 + this.num2;
